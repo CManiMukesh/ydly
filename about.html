@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ydly Water Delivery</title>
+    <link rel="icon" type="image/x-icon" href="images/Untitled design (1).png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b00;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 2px 0;
+            transition: 0.4s;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .main-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .main-image {
+                flex: 1;
+                max-width: 50%;
+            }
+        }
+
+        .content-section {
+            flex: 1;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b00;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e65100;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .food-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .food-item {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .whatsapp-icon, .instagram-icon {
+            position: fixed;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-icon {
+    right: 20px;
+    background-color: white;
+    color: #fff;
+}
+
+.whatsapp-icon:hover {
+    background-color: #25D366;
+}
+
+.instagram-icon {
+    right: 90px;
+    background-color: white;
+    color: #fff;
+}
+
+.instagram-icon:hover {
+    background-color: orangered;
+}
+
+        footer {
+            background-color: #000000;
+            color: #ccc;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1e1e1e;
+                padding: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        .about-content {
+            padding: 2rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b00;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ydly</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="about-content">
+            <h1>About ydly Water Delivery</h1>
+            <p>Welcome to ydly water Delivery, your go-to solution for quick, tasty water delivered right to your doorstep. Founded in 2024, we've been on a mission to revolutionize the way people buy water in our city.</p>
+            <p>Our team of passionate water lovers and tech enthusiasts work tirelessly to bring you a seamless ordering experience and the finest water from local shops. We believe that great water should be accessible to everyone, anytime, anywhere.</p>
+            <p>What sets us apart is our commitment to:</p>
+            <ul>
+                <li>Lightning-fast delivery times</li>
+                <li>A wide selection of water</li>
+                <li>Partnerships with top-rated local Water Shops</li>
+                <li>Excellent customer service</li>
+            </ul>
+            <p>Whether you're craving a quick sip, planning a dinner party, or just don't feel like going out, ydly Water Delivery is here to satisfy your thirst with just a few taps on your phone.</p>
+            <p>Join us in and experience the convenience of ydly Water Delivery today!</p>
+        </div>
+    </main>
+    <a href="#" class="whatsapp-icon" id="whatsapp-order"></a>
+    <footer>
+        <div class="container">
+            ydly © 2024</p>
+        </div>
+    </footer>
+    <a href="#" class="whatsapp-icon wa" id="whatsapp-order2"><img src="images/icons8-whatsapp-50.png" width="50px" alt=""></a>
+    <a href="#" class="instagram-icon" id="instagram-link"><img style="width: 60px;" src="images/instagram_1400829.png" alt=""></a>
+    <script src="script.js"></script>
+</body>
+</html>

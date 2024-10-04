@@ -156,7 +156,7 @@ orderForm.addEventListener('submit', (e) => {
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0) + DELIVERY_FEE + PLATFORM_FEE;
     const message = `New Order:\n\nItems: ${orderDetails}\nDelivery Location: ${location}\nTotal: &#8377;${total}\nPayment: Cash on Delivery`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/8610363310?text=${encodedMessage}`, '_blank');
 });
 
 function initializeDisplay() {

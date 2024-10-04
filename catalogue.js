@@ -154,7 +154,7 @@ orderForm.addEventListener('submit', (e) => {
     }
     const orderDetails = cart.map(item => `${item.name} x${item.quantity}`).join(', ');
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0) + DELIVERY_FEE + PLATFORM_FEE;
-    const message = `New Order:\n\nItems: ${orderDetails}\nDelivery Location: ${location}\nTotal: ₹${total}\nPayment: Cash on Delivery`;
+    const message = `New Order:\n\nItems: ${orderDetails}\nDelivery Location: ${location}\nTotal:${total} Rupees\nPayment: Cash on Delivery`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/8610363310?text=${encodedMessage}`, '_blank');
 });

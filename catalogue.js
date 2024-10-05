@@ -1,17 +1,18 @@
 const products = [
-    { id: 1, name: 'Cheeseburger', price: 6, category: 'Burger', image: '/api/placeholder/200/200' },
-    { id: 2, name: 'Pepperoni Pizza', price: 9, category: 'Pizza', image: '/api/placeholder/200/200' },
-    { id: 3, name: 'Chocolate Cake', price: 10, category: 'Cake', image: '/api/placeholder/200/200' },
-    { id: 4, name: 'Vanilla Ice Cream', price: 4, category: 'Ice cream', image: '/api/placeholder/200/200' },
-    { id: 5, name: 'Club Sandwich', price: 5, category: 'Sandwich', image: '/api/placeholder/200/200' },
-    { id: 6, name: 'Pad Thai', price: 8, category: 'Noodles', image: '/api/placeholder/200/200' },
-    { id: 7, name: 'Veggie Burger', price: 7, category: 'Burger', image: '/api/placeholder/200/200' },
-    { id: 8, name: 'Margherita Pizza', price: 8, category: 'Pizza', image: '/api/placeholder/200/200' },
-    { id: 9, name: 'Strawberry Cheesecake', price: 6, category: 'Cake', image: '/api/placeholder/200/200' },
-    { id: 10, name: 'Chocolate Ice Cream', price: 4, category: 'Ice cream', image: '/api/placeholder/200/200' },
-    { id: 11, name: 'Tuna Sandwich', price: 6, category: 'Sandwich', image: '/api/placeholder/200/200' },
-    { id: 12, name: 'Spaghetti Bolognese', price: 9, category: 'Noodles', image: '/api/placeholder/200/200' },
+    { id: 1, name: 'Cheeseburger', price: 1, category: 'Beer', image: '/api/placeholder/200/200' },
+    { id: 2, name: 'Pepperoni Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200' },
+    { id: 3, name: 'Chocolate Cake', price: 1, category: 'Rum', image: '/api/placeholder/200/200' },
+    { id: 4, name: 'Vanilla Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200' },
+    { id: 5, name: 'Club Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200' },
+    { id: 6, name: 'Pad Thai', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200' },
+    { id: 7, name: 'Veggie Burger', price: 1, category: 'Beer', image: '/api/placeholder/200/200' },
+    { id: 8, name: 'Margherita Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200' },
+    { id: 9, name: 'Strawberry Cheesecake', price: 1, category: 'Rum', image: '/api/placeholder/200/200' },
+    { id: 10, name: 'Chocolate Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200' },
+    { id: 11, name: 'Tuna Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200' },
+    { id: 12, name: 'Spaghetti Bolognese', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200' },
 ];
+
 
 const productsContainer = document.getElementById('products-container');
 const categoryButtons = document.querySelectorAll('.category-button');

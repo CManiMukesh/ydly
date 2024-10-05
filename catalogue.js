@@ -1,16 +1,16 @@
 const products = [
-    { id: 1, name: 'Cheeseburger', price: 1, category: 'Beer', image: '/api/placeholder/200/200' },
-    { id: 2, name: 'Pepperoni Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200' },
-    { id: 3, name: 'Chocolate Cake', price: 1, category: 'Rum', image: '/api/placeholder/200/200' },
-    { id: 4, name: 'Vanilla Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200' },
-    { id: 5, name: 'Club Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200' },
-    { id: 6, name: 'Pad Thai', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200' },
-    { id: 7, name: 'Veggie Burger', price: 1, category: 'Beer', image: '/api/placeholder/200/200' },
-    { id: 8, name: 'Margherita Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200' },
-    { id: 9, name: 'Strawberry Cheesecake', price: 1, category: 'Rum', image: '/api/placeholder/200/200' },
-    { id: 10, name: 'Chocolate Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200' },
-    { id: 11, name: 'Tuna Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200' },
-    { id: 12, name: 'Spaghetti Bolognese', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200' },
+    { id: 1, name: 'Cheeseburger', price: 1, category: 'Beer', image: '/api/placeholder/200/200', availability: true },
+    { id: 2, name: 'Pepperoni Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200', availability: false },
+    { id: 3, name: 'Chocolate Cake', price: 1, category: 'Rum', image: '/api/placeholder/200/200', availability: true },
+    { id: 4, name: 'Vanilla Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200', availability: false },
+    { id: 5, name: 'Club Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200', availability: true },
+    { id: 6, name: 'Pad Thai', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200', availability: false },
+    { id: 7, name: 'Veggie Burger', price: 1, category: 'Beer', image: '/api/placeholder/200/200', availability: false },
+    { id: 8, name: 'Margherita Pizza', price: 1, category: 'Vodka', image: '/api/placeholder/200/200', availability: true },
+    { id: 9, name: 'Strawberry Cheesecake', price: 1, category: 'Rum', image: '/api/placeholder/200/200', availability: false },
+    { id: 10, name: 'Chocolate Ice Cream', price: 1, category: 'Wine', image: '/api/placeholder/200/200', availability: true },
+    { id: 11, name: 'Tuna Sandwich', price: 1, category: 'Brandy', image: '/api/placeholder/200/200', availability: false },
+    { id: 12, name: 'Spaghetti Bolognese', price: 1, category: 'Whiskey', image: '/api/placeholder/200/200', availability: true },
 ];
 
 
@@ -40,11 +40,13 @@ function displayProducts(category = 'all') {
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>&#8377;${product.price}</p>
-                <div class="quantity-control">
+                ${product.availability ? `
+                    <div class="quantity-control">
                     <button class="quantity-btn minus" data-id="${product.id}">-</button>
                     <span class="quantity-display" data-id="${product.id}">${quantity}</span>
                     <button class="quantity-btn plus" data-id="${product.id}">+</button>
-                </div>
+                    </div>                    
+                ` : `<p class="OOS">Out of Stock</p>`}                
             `;
             productsContainer.appendChild(productElement);
         }

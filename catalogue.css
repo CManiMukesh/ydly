@@ -124,3 +124,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.OOS{
+    background-color: #f0f0f0;
+    width: 100px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}

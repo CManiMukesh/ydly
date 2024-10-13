@@ -5,20 +5,6 @@ const carouselImages = [
 ];
 
 const products = [
-    { 
-        name: "AMSTEL INTERNATIONAL STRONG BEER", 
-        image: "https://example.com/path/to/amstel.jpg", 
-        sizes: ["650ML", "500 ML CAN"],
-        prices: { "650ML": 200.00, "500 ML CAN": 180.00 },
-        category: "beer"
-    },
-    { 
-        name: "KINGFISHER PREMIUM LAGER BEER", 
-        image: "https://example.com/path/to/kingfisher.jpg", 
-        sizes: ["650ML", "500 ML CAN", "330ML"],
-        prices: { "650ML": 190.00, "500 ML CAN": 170.00, "330ML": 120.00 },
-        category: "beer"
-    },
     {
         name: "CHATEAU MARGAUX RED WINE",
         image: "https://example.com/path/to/chateau-margaux.jpg",
@@ -32,8 +18,313 @@ const products = [
         sizes: ["180ML", "375ML", "750ML"],
         prices: { "180ML": 2000.00, "375ML": 4000.00, "750ML": 7500.00 },
         category: "brandy"
-    }
-    // Add more products here
+    },
+    // Add more products- Beer
+    {
+        name: "Corona",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["500 ML", "330 ML"],
+        prices: {"500 ML": 250, "330 ML": 170 },
+        category: "beer"
+    },
+    {
+        name: "Hoegarden",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["500 ML", "330 ML"],
+        prices: {"500 ML": 250, "330 ML": 170 },
+        category: "beer"
+    },
+    { 
+        name: "Budweiser", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Carlsberg", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Kingfisher Ultra", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Heineken", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Bira", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Kingfisher Ultra Wit", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "BaraSingha", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 230, "500 ML": 230, "330 ML": 140 },
+        category: "beer"
+    },
+    { 
+        name: "Tuborg", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 180, "500 ML": 180, "330 ML": 110 },
+        category: "beer"
+    },
+    { 
+        name: "Kingfisher", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML", "330 ML"],
+        prices: { "650 ML": 180, "500 ML": 180, "330 ML": 110 },
+        category: "beer"
+    },
+    { 
+        name: "Bira Boom", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML"],
+        prices: { "650 ML": 180, "500 ML": 180},
+        category: "beer"
+    },
+    { 
+        name: "Bacardi Breezer", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["275 ML"],
+        prices: { "275 ML": 150},
+        category: "beer"
+    },
+    { 
+        name: "Bacardi Breezer Plus", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["275 ML"],
+        prices: { "275 ML": 150},
+        category: "beer"
+    },
+    { 
+        name: "Buho Strong", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["500 ML"],
+        prices: {"500 ML": 230},
+        category: "beer"
+    },
+    { 
+        name: "Buho Wheat", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["500 ML"],
+        prices: {"500 ML": 230},
+        category: "beer"
+    },
+    { 
+        name: "Druk Strong", 
+        image: "https://example.com/path/to/kingfisher.jpg", 
+        sizes: ["650 ML", "500 ML"],
+        prices: { "650 ML": 160, "500 ML": 140},
+        category: "beer"
+    },
+    // IMFL
+    {
+        name: "Amrut Fusion",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3600},
+        category: "rum"
+    },
+    {
+        name: "Godawan Single Malt 01",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Godawan Single Malt 02",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Amrut Amalgam",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Indri Single Malt",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Kumaoni Gin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Pistola",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Longitude 77",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Jaisalmer Gin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Happusa",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2500},
+        category: "rum"
+    },
+    {
+        name: "Enso",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2500},
+        category: "rum"
+    },
+    {
+        name: "Samsara Paradise",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2500},
+        category: "rum"
+    },
+    {
+        name: "Black Dog 14 Year Old",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2700},
+        category: "rum"
+    },
+    {
+        name: "Paul John Bold",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Paul John Brilliance",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 3200},
+        category: "rum"
+    },
+    {
+        name: "Teacher's Origin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2200},
+        category: "rum"
+    },
+    {
+        name: "Malhar",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2200},
+        category: "rum"
+    },
+    {
+        name: "Solhan Gold Single Malt",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2100},
+        category: "rum"
+    },
+    {
+        name: "Tamras Gin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 2000},
+        category: "rum"
+    },
+    {
+        name: "Teacher's Golden 12 Year Old",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 1800},
+        category: "rum"
+    },
+    {
+        name: "Paul John Nirvana",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 1800},
+        category: "rum"
+    },
+    {
+        name: "Jin Jiji Darjeeling Dry Gin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 1800},
+        category: "rum"
+    },
+    {
+        name: "Bandarful Cold Brew Coffee",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 1800},
+        category: "rum"
+    },
+    {
+        name: "Macroy's Sherry Finish Blended Whiskey",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML"],
+        prices: { "750 ML": 1800},
+        category: "rum"
+    },
+    {
+        name: "Greater than Broken Bat Gin",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["750 ML", "375 ML", "180 ML"],
+        prices: { "750 ML": 1800, "375 ML": 1000, "180 ML": 600 },
+        category: "brandy"
+    },
+    {
+        name: "Blenders Pride",
+        image: "https://example.com/path/to/hennessy.jpg",
+        sizes: ["2 Ltr"],
+        prices: { "2 Ltr": 1800},
+        category: "brandy"
+    },
+    // till bp 2 lts, post that complete
+
+    // Imported
 ];
 
 let cart = {};

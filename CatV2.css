@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.carousel {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.carousel img.active {
+    opacity: 1;
+}
+.search-bar {
+    margin-bottom: 20px;
+    position: relative;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+}
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.category-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.category-buttons button {
+    padding: 10px;
+    cursor: pointer;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 375px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.size-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.size-option {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.size-option.selected {
+    background-color: #f0f0f0;
+}
+.quantity-control {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.quantity-control.visible {
+    display: flex;
+}
+.quantity-control button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.quantity-control span {
+    margin: 0 10px;
+}
+.add-to-cart {
+    background-color: #4a0e4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#viewCart {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a0e4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+#cartModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.cart-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+}
